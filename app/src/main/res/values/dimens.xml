@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="cardViewHeight">100dp</dimen>
+    <dimen name="cardViewRadius">4dp</dimen>
+
+    <dimen name="layoutHorizontalMargin">16dp</dimen>
+    <dimen name="textViewMargin">10dp</dimen>
+    <dimen name="textViewMarginEnd">5dp</dimen>
+
+    <dimen name="imageViewWidth">0.4</dimen>
+    <dimen name="infoCardViewWidth">0.6</dimen>
+
+    <dimen name="textViewDescriptionSize">12sp</dimen>
+</resources>
