@@ -25,12 +25,12 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<ViewHolderFruit>{
     @Override
     public ViewHolderFruit onCreateViewHolder(ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(this.activity).inflate(this.layout, parent, false);
-        return new ViewHolderFruit(v);
+        return new ViewHolderFruit(v, this);
     }
 
     @Override
     public void onBindViewHolder(ViewHolderFruit holder, int position) {
-        holder.bind(this.fruits.get(position), this.activity, this.listener);
+        holder.bind(this.fruits.get(position), this.listener);
     }
 
     @Override
@@ -40,5 +40,13 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<ViewHolderFruit>{
 
     public interface onBackgroundClick {
         void onClick(Fruit fruit, int position);
+    }
+
+    Activity getActivity() {
+        return activity;
+    }
+
+    ArrayList<Fruit> getFruits() {
+        return fruits;
     }
 }
