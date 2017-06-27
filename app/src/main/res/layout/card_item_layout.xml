@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    android:id="@+id/cardViewItem"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_height="@dimen/cardViewHeight"
+    android:layout_width="match_parent"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    card_view:cardCornerRadius="@dimen/cardViewRadius"
+    android:layout_margin="@dimen/layoutHorizontalMargin"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/fruitBackground"
+            android:contentDescription="@string/fruitImageDescription"
+            android:layout_width="0dp"
+            android:layout_weight="0.4"
+            android:layout_height="match_parent"
+            />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="0.6"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:id="@+id/fruitName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/textViewMargin"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:id="@+id/fruitDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/textViewMargin"
+                android:textStyle="italic"
+                android:textSize="@dimen/textViewDescriptionSize"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:id="@+id/fruitAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="@dimen/textViewMarginEnd"
+                android:layout_marginRight="@dimen/textViewMarginEnd"
+                android:layout_marginBottom="@dimen/textViewMarginEnd"
+                android:textColor="@android:color/holo_blue_light"
+                android:layout_gravity="end"
+                android:gravity="bottom"/>
+        </LinearLayout>
+    </LinearLayout>
+</android.support.v7.widget.CardView>
