@@ -28,7 +28,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<ViewHolderFruit>{
 
     @Override
     public void onBindViewHolder(ViewHolderFruit holder, int position) {
-        holder.bind(this.fruits.get(position));
+        holder.bind(this.fruits.get(position), this.activity);
     }
 
     @Override
