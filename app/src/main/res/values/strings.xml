@@ -2,6 +2,8 @@
     <string name="app_name">FruitWorld2</string>
 
     <string name="add_fruit">Add Fruit</string>
+    <string name="delete_fruit">Delete</string>
+    <string name="reset_amount_fruit">Restore amount (0)</string>
     <string name="fruit_standard_name">Plum</string>
     <string name="fruit_standard_description">Fruit added by user</string>
     <string name="fruitImageDescription">Fruit\'s image</string>
