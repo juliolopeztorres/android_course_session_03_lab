@@ -2,4 +2,6 @@
     <string name="app_name">FruitWorld2</string>
 
     <string name="fruitImageDescription">Fruit\'s image</string>
+
+    <string name="messageUpdateFruitMaximumAmount">Max. value for fruit\'s amount is 10</string>
 </resources>
