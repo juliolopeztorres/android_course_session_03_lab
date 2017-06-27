@@ -54,7 +54,7 @@
                 android:layout_marginEnd="@dimen/textViewMarginEnd"
                 android:layout_marginRight="@dimen/textViewMarginEnd"
                 android:layout_marginBottom="@dimen/textViewMarginEnd"
-                android:textColor="@android:color/holo_red_dark"
+                android:textColor="@android:color/holo_blue_light"
                 android:layout_gravity="end"
                 android:gravity="bottom"/>
         </LinearLayout>
