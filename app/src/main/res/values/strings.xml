@@ -1,7 +1,9 @@
 <resources>
     <string name="app_name">FruitWorld2</string>
 
+    <string name="add_fruit">Add Fruit</string>
+    <string name="fruit_standard_name">Plum</string>
+    <string name="fruit_standard_description">Fruit added by user</string>
     <string name="fruitImageDescription">Fruit\'s image</string>
-
     <string name="messageUpdateFruitMaximumAmount">Max. value for fruit\'s amount is 10</string>
 </resources>
