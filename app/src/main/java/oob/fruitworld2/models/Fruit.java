@@ -21,8 +21,8 @@ public class Fruit {
         this.setAmount(Utils.MINIMUM_AMOUNT);
     }
 
-    public void addAmount() {
-        this.setAmount(this.getAmount() + 1);
+    public boolean addAmount() {
+        return this.setAmount(this.getAmount() + 1);
     }
 
     // ---------------- Getters & Setters ----------------
