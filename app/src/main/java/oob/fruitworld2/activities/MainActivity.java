@@ -4,9 +4,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-
+import android.widget.Toast;
 import java.util.ArrayList;
-
 import oob.fruitworld2.R;
 import oob.fruitworld2.adapters.RecyclerViewAdapter;
 import oob.fruitworld2.models.Fruit;
@@ -28,11 +27,24 @@ public class MainActivity extends AppCompatActivity {
 
         this.recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
         this.layoutManager = new LinearLayoutManager(this);
-        this.recyclerViewAdapter = new RecyclerViewAdapter(this.fruits, R.layout.card_item_layout, this);
+        this.recyclerViewAdapter = new RecyclerViewAdapter(this.fruits, R.layout.card_item_layout, this, new RecyclerViewAdapter.onBackgroundClick() {
+            @Override
+            public void onClick(Fruit fruit, int position) {
+                if (fruit.addAmount()) {
+                    recyclerViewAdapter.notifyItemChanged(position);
+                } else {
+                    showErrorUpdatingFruitAmount();
+                }
+            }
+        });
 
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(this.layoutManager);
         recyclerView.setAdapter(this.recyclerViewAdapter);
+    }
+
+    private void showErrorUpdatingFruitAmount() {
+        Toast.makeText(this, getString(R.string.messageUpdateFruitMaximumAmount), Toast.LENGTH_SHORT).show();
     }
 
     public ArrayList<Fruit> getAllFruits() {
